@@ -3,11 +3,6 @@ export interface Repo {
     description: string;
     html_url: string;
     owner: string;
-}
-
-export interface Card {
-    title: string;
-    description: string;
-    link: string;
-    owner: string;
+    fork: boolean;
+    homepage: string;
 }

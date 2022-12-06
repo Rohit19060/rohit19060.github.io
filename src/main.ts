@@ -5,21 +5,16 @@ import badge from './github_opensource';
 let x = ``;
 getRepos().then((repos) => {
     repos.sort((a, b) => {
-        if (a.name < b.name) {
-            return -1;
-        }
-        if (a.name > b.name) {
+        if (a.fork) {
             return 1;
+        }
+        if (b.fork) {
+            return -1;
         }
         return 0;
     });
     repos.forEach((repo) => {
-        x += card({
-            title: repo.name,
-            description: repo.description,
-            link: repo.html_url,
-            owner: repo.owner,
-        }).outerHTML;
+        x += card(repo).outerHTML;
     });
     document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <h2>My Projects</h2>

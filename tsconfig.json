@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
     "outDir": "docs",
     "target": "ESNext",
     "useDefineForClassFields": true,
