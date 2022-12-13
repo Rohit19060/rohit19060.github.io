@@ -1,12 +1,6 @@
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
   line-height: 24px;
-  font-weight: 400;
-
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #8d8d8d;
-
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -16,44 +10,48 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
   grid-gap: 1rem;
-  margin: 10px auto;
+  margin: 50px 10px;
   text-decoration: none;
-  margin-top: 50px;
+  padding-bottom: 5%;
 }
 
-h2 {
+p {
+  margin: 0;
+  padding: 0;
+  color: rgb(59, 59, 59);
+}
+
+h1 {
   text-align: center;
-  color: #0c89f7;
-  text-decoration: none;
-  margin-top: 50px;
+}
+
+.header {
+  padding: 2rem;
 }
 
 main .card {
-  padding: 30px;
-  box-shadow: 1px 1px 12px 0px rgb(69 179 253 / 40%);
+  border-radius: 15px;
+  box-shadow: 1px 1px 10px 0px rgb(69 179 253 / 40%);
   transition: transform 0.2s;
   text-decoration: none;
   color: black;
-  padding: 1rem;
-  cursor: pointer;
+  padding: 1.4rem;
 }
 
 main .card:hover {
-  background-color: rgba(245, 245, 245, 0.8470588235);
   transform: translateY(-2px);
+  box-shadow: 1px 1px 10px 0px rgb(69 179 253 / 20%);
 }
 
 main .card:active {
-  background-color: white;
   transform: translateY(2px);
+  box-shadow: none;
 }
-
 
 .cardData {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
+  text-transform: capitalize;
 }
 
 button {
@@ -67,13 +65,4 @@ button {
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-}
-
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    color: #213547;
-    background-color: #e0e0e0;
-  }
-
 }

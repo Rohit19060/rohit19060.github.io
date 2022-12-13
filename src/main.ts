@@ -17,7 +17,7 @@ getRepos().then((repos) => {
         x += card(repo).outerHTML;
     });
     document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-    <h2>My Projects</h2>
+    <div class="header"><h1>My Projects</h1></div>
     <div>${badge('https://github.com/Rohit19060/rohit19060.github.io')}</div>
     <main>${x}</main>`;
 });
