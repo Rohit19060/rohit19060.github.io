@@ -13,6 +13,6 @@
     "vite": "^4.0.4"
   },
   "dependencies": {
-    "@octokit/rest": "^19.0.5"
+    "@octokit/rest": "^19.0.7"
   }
 }
