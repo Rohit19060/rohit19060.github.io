@@ -9,8 +9,8 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "typescript": "^4.9.5",
     "vite": "^4.2.0"
+    "typescript": "^5.0.2",
   },
   "dependencies": {
     "@octokit/rest": "^19.0.7"
