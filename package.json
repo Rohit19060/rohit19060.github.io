@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "typescript": "^5.0.4",
-    "vite": "^4.3.3"
+    "vite": "^4.3.5"
   },
   "dependencies": {
     "@octokit/rest": "^19.0.7"
