@@ -109,14 +109,16 @@ button {
   font-size: 20px;
   box-shadow: 1px 1px 10px 0px rgb(69 179 253 / 40%);
 
-  &:hover {
-    box-shadow: 1px 1px 10px 0px rgb(69 179 253 / 20%);
-  }
 
-  &:active {
-    transform: translateY(2px);
-    box-shadow: none;
-  }
+}
+
+.upper_card > a:hover {
+  box-shadow: 1px 1px 10px 0px rgb(69 179 253 / 20%);
+}
+
+.upper_card > a:active {
+  transform: translateY(2px);
+  box-shadow: none;
 }
 
 .card > :nth-child(2n) {
