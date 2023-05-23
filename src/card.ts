@@ -1,22 +1,23 @@
-import './style.css';
-import { Repo } from './types';
+import "./style.css";
+import { Repo } from "./types";
 
-
-export default function createCard(x: Repo): Element {
-    const cardData = document.createElement('a');
-    cardData.className = "card";
-    cardData.href = x.html_url;
-    cardData.title = x.name;
-    cardData.target = '_blank';
-    const div = document.createElement('div');
-    div.classList.add('cardData');
-    const name = document.createElement('h3');
-    name.innerText = x.name.replaceAll("_", ' ').replaceAll("-", ' ');
-    const desc = document.createElement('p');
-    desc.innerText = x.description;
-    div.appendChild(name);
-    div.appendChild(desc);
-    cardData.appendChild(div);
-    return cardData;
+export default function createCard(e: Repo): Element {
+  let card = document.createElement("a");
+  card.href = e.html_url;
+  card.className = "card";
+  card.title = e.name;
+  card.innerHTML = `
+  <div>
+    <h3>${e.name}</h3>
+    <h5>${e.description == null ? "" : e.description}</h5>
+</div>`;
+  if (
+    e.homepage != null && e.homepage != "" && e.homepage != "null" &&
+    e.homepage != "undefined" && e.homepage.includes("https://")
+  ) {
+    card.innerHTML += `<div class="upper_card">
+    <a href="${e.homepage}" target="_blank" class="btn">Code</a>
+</div>`;
+  }
+  return card;
 }
-
