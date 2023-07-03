@@ -59,13 +59,19 @@ git clone https://github.com/Rohit19060/rohit19060.github.io.git
 2. Install Dependencies
 
 ```Bash
-npm i
+pnpm i
 ```
 
 3. Run the app
 
 ```Bash
-npm dev
+pnpm dev
+```
+
+4. Build the app
+
+```Bash
+pnpm build
 ```
 
 ## ❗ Available Commands
