@@ -108,8 +108,6 @@ button {
   color: black;
   font-size: 20px;
   box-shadow: 1px 1px 10px 0px rgb(69 179 253 / 40%);
-
-
 }
 
 .upper_card > a:hover {
@@ -123,9 +121,24 @@ button {
 
 .card > :nth-child(2n) {
   position: absolute;
-  top: 30px;
+  bottom: 0px;
 }
 
 .card:hover > :nth-child(2n) {
   opacity: 1;
+}
+
+.description {
+  font-size: 14px;
+  margin-top: 10px;
+  color: rgb(59, 59, 59);
+  /* max lines 4 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
+  height: 100px;
+
 }
