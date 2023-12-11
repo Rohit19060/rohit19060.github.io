@@ -6,19 +6,25 @@ import { Repo } from "./types";
 let x = document.createElement("div");
 let repos: Repo[] = [];
 
-async function updateRepos() {
-  repos = (await getRepos()).sort((a, b) => {
-    if (a.fork) {
+async function updateRepos()
+{
+  repos = (await getRepos()).sort((a, b) =>
+  {
+    if (a.fork)
+    {
       return 1;
     }
-    if (b.fork) {
+    if (b.fork)
+    {
       return -1;
     }
     return 0;
   });
 }
-updateRepos().then(() => {
-  repos.forEach((repo) => {
+updateRepos().then(() =>
+{
+  repos.forEach((repo) =>
+  {
     x.appendChild(card(repo));
   });
   document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
@@ -33,16 +39,19 @@ updateRepos().then(() => {
 
   let searchELE = document.getElementById("search") as HTMLInputElement;
 
-  searchELE.addEventListener("input", (e) => {
+  searchELE.addEventListener("input", (e) =>
+  {
     let x = document.createElement("div");
     let search = (e.target as HTMLInputElement).value;
     let newCardArr = repos.filter((card) =>
       card.name.toLowerCase().includes(search.toLowerCase())
     );
-    newCardArr.forEach((repo) => {
+    newCardArr.forEach((repo) =>
+    {
       x.appendChild(card(repo));
     });
     document.querySelector<HTMLDivElement>("main")!.innerHTML = "";
     document.querySelector<HTMLDivElement>("main")!.appendChild(x);
   });
 });
+

@@ -10,6 +10,10 @@ html {
   overflow-y: scroll;
 }
 
+.text-center {
+  text-align: center;
+}
+
 main > div {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
@@ -33,7 +37,7 @@ h1 {
   padding: 2rem;
 }
 
-main > div .card {
+.card {
   position: relative;
   border-radius: 15px;
   box-shadow: 1px 1px 10px 0px rgb(69 179 253 / 40%);
@@ -41,29 +45,66 @@ main > div .card {
   text-decoration: none;
   color: black;
   padding: 1.4rem;
-}
 
-main > div .card:hover {
-  transform: translateY(-2px);
-  box-shadow: 1px 1px 10px 0px rgb(69 179 253 / 20%);
-}
+  a {
+    text-decoration: none;
+    color: black;
 
-main > div .card:active {
-  transform: translateY(2px);
-  box-shadow: none;
-}
+    .description {
+      font-size: 14px;
+      margin-top: 10px;
+      color: rgb(59, 59, 59);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      height: 100px;
+    }
 
-button {
-  background-color: #0c89f7;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px;
-  margin-top: 10px;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
+  }
+
+
+  .upper_card {
+    position: absolute;
+    bottom: 0px;
+    opacity: 0;
+    background-color: white;
+    display: flex;
+    width: calc(100% - 2.8rem);
+    height: 18%;
+    padding-bottom: 20px;
+    opacity: 0;
+    transition: opacity 0.1s;
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      border-radius: 20px;
+      font-size: 20px;
+      box-shadow: 1px 1px 10px 0px rgb(69 179 253 / 40%);
+
+      &:hover {
+        box-shadow: 1px 1px 10px 0px rgb(69 179 253 / 20%);
+      }
+
+      &:active {
+        transform: translateY(2px);
+        box-shadow: none;
+      }
+    }
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 1px 1px 10px 0px rgb(69 179 253 / 20%);
+
+    .upper_card {
+      opacity: 1;
+    }
+  }
 }
 
 #search {
@@ -81,64 +122,4 @@ button {
   #search {
     width: 100%;
   }
-}
-
-.text-center {
-  text-align: center;
-}
-
-.upper_card {
-  display: flex;
-  width: calc(100% - 2.8rem);
-  height: 18%;
-  padding-bottom: 20px;
-  opacity: 0;
-  transition: opacity 0.1s;
-}
-
-.upper_card > a {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  background-color: white;
-  border-radius: 20px;
-  text-decoration: none;
-  color: black;
-  font-size: 20px;
-  box-shadow: 1px 1px 10px 0px rgb(69 179 253 / 40%);
-}
-
-.upper_card > a:hover {
-  box-shadow: 1px 1px 10px 0px rgb(69 179 253 / 20%);
-}
-
-.upper_card > a:active {
-  transform: translateY(2px);
-  box-shadow: none;
-}
-
-.card > :nth-child(2n) {
-  position: absolute;
-  bottom: 0px;
-}
-
-.card:hover > :nth-child(2n) {
-  opacity: 1;
-}
-
-.description {
-  font-size: 14px;
-  margin-top: 10px;
-  color: rgb(59, 59, 59);
-  /* max lines 4 */
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  /* number of lines to show */
-  -webkit-box-orient: vertical;
-  height: 100px;
-
 }
