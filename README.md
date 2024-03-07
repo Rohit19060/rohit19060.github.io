@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/Rohit19060/rohit19060.github.io" title="rohit19060.github.io">
-    <img src="https://kingtechnologies.in/assets/images/Logo.webp" width="80px" alt="rohit19060.github.io"/>
+    <img src="https://kingtechnologies.dev/assets/images/logo.webp" width="80px" alt="rohit19060.github.io"/>
   </a>
 </p>
 <h1 align="center">🌟 rohit19060.github.io 🌟</h1>
