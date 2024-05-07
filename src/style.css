@@ -62,6 +62,12 @@ h1 {
       height: 100px;
     }
 
+    .name {
+      text-transform: capitalize;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
   }
 
 

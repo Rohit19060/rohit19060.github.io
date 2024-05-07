@@ -1,8 +1,7 @@
 import "./style.css";
 import { Repo } from "./types";
 
-export default function createCard(e: Repo): Element
-{
+export default function createCard(e: Repo): Element {
   let newDiv = document.createElement("div");
   newDiv.className = "card";
   let card = document.createElement("a");
@@ -14,7 +13,7 @@ export default function createCard(e: Repo): Element
   card.title = e.name;
   card.innerHTML = `
   <div>
-    <h3>${e.name}</h3>
+    <h3 class="name">${e.name.replaceAll("_", " ")}</h3>
     <h5 class="description">${e.description == null ? "" : e.description}</h5>
 </div>`;
   newDiv.appendChild(card);
