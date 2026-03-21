@@ -5,11 +5,4 @@ export default defineConfig({
     build: {
         outDir: 'docs',
     },
-    optimizeDeps: {
-        esbuildOptions: {
-            define: {
-                global: 'globalThis',
-            },
-        },
-    },
 });

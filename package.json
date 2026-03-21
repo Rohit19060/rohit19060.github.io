@@ -9,7 +9,7 @@
     "preview": "vite preview --host --open"
   },
   "devDependencies": {
-    "typescript": "^5.9.2",
-    "vite": "^7.1.3"
+    "@typescript/native-preview": "^7.0.0-dev.20260321.1",
+    "vite": "^8.0.1"
   }
 }
